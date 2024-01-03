@@ -7,7 +7,7 @@ Then verify title
 Scenario: Verification of text on the page
 Given launch url
 When click on A/B Testing link
-Then verify main headline text "A/B Test Control"
+Then verify main headline text "A/B Test Variation 1"
 
 Scenario: Verification of dropdown selection on the page
 Given launch url
@@ -27,11 +27,12 @@ Then verify "Nested Frames" & "iFrame" links are presented on page
 Scenario: Verification of checkbox selection & file upload on the page
 Given launch url
 When click on Checkboxes link
-Then verify text "Checkboxes"
+Then verify checkbox text "Checkboxes"
 Then verify "checkbox 1" is not checked
 And verify "checkbox 2" is checked
 And go back to home page
 When click on File Upload link
-Then verify text "File Uploader"
+Then verify file upload text "File Uploader"
 And click on Choose File button
 And click on upload button
+Then verify file uploaded

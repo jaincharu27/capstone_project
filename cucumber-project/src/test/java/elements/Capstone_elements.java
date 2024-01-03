@@ -23,6 +23,8 @@ public class Capstone_elements {
 	@FindBy(xpath = "//input[@type='checkbox'][2]") public WebElement checkbox2;
 	@FindBy(id = "file-upload") public WebElement choose_file_button;
 	@FindBy(id = "file-submit") public WebElement upload_button;
+	@FindBy(tagName = "h3") public WebElement text_file_upload;
+	@FindBy(tagName = "h3") public WebElement text_file_uploaded;
 	
 	public Capstone_elements(WebDriver driver) {
 		this.driver= driver;

@@ -66,9 +66,15 @@ public class Steps {
 		Assert.assertEquals(string, page_headline);
 	}
 	
-	@Then("verify text {string}")
-	public void verify_text(String string) {
+	@Then("verify checkbox text {string}")
+	public void verify_checkbox_text(String string) {
 		String page_headline = login_actions.get_text_Checkboxes();		
+		Assert.assertEquals(string, page_headline);
+	}
+
+	@Then("verify file upload text {string}")
+	public void verify_file_upload_text(String string) {
+		String page_headline = login_actions.get_text_File_Upload();		
 		Assert.assertEquals(string, page_headline);
 	}
 
@@ -113,7 +119,7 @@ public class Steps {
 	
 	@Then("click on Choose File button")
 	public void click_on_choose_file_button() {
-		System.out.println("Please make sure to update file path as per your system!!n");
+		System.out.println("Please make sure to update file path as per your system!!");
 		login_actions.filePath_to_choose_file("C:\\Users\\JCHARU\\Downloads\\test image.png");
 	}
 	
@@ -122,4 +128,9 @@ public class Steps {
 		login_actions.click_on_upload_button();
 	}
 	
+	@Then("verify file uploaded")
+	public void verify_file_uploaded() {
+		Assert.assertEquals(login_actions.get_text_File_Uploaded(), "File Uploaded!");
+	}
+
 }

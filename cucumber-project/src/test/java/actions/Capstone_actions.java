@@ -47,6 +47,14 @@ public class Capstone_actions {
 		login_elements.File_Upload_link.click();
 	}
 
+	public String get_text_File_Upload() {
+		return login_elements.text_file_upload.getText();
+	}
+
+	public String get_text_File_Uploaded() {
+		return login_elements.text_file_uploaded.getText();
+	}
+
 	public void click_on_upload_button() {
 		login_elements.upload_button.click();
 	}
